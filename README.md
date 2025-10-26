@@ -45,37 +45,6 @@ Detects and reports any new or removed attendance marks.
 - Local SQLite database (bot_data.sqlite) stores user subscriptions and last known grades.  
 - Detects changes even after a restart.
 
-### Comprehensive Admin Panel
-
-Admin commands for full control directly via Telegram:
-
-- `/resources` – View CPU, RAM, disk usage, and bot-specific stats.  
-- `/log` – View live runtime logs.  
-- `/list`, `/set`, `/delete` – Manage users and subscriptions.  
-- `/notify` – Broadcast messages to all users.  
-- `/restart`, `/stop` – Gracefully restart or shut down the bot.
-
-## How it Works (in a nutshell)
-
-### **Startup**
-- Opens SQLite DB, HTTP scraper, Telegram bot, and message queue.
-
-### **Login**
-- Signs into `mektep.edu.kz` and keeps the session alive.
-
-### **Baseline**
-- Grabs the full class/student list and all current grades/absences, saving them as the baseline.
-
-### **Monitoring Loop (per subject)**
-1. Sleep for adaptive interval (60–300s).  
-2. Pull fresh data.  
-3. Diff against the database.  
-4. If nothing changed - lengthen interval.  
-5. If something changed - update DB, reset interval, and send formatted message via queue.
-
-### **Message Delivery**
-- A worker reads from the queue and sends Telegram messages, handling rate limits and retries.
-
 ## Bot Usage
 
 ### User Commands
