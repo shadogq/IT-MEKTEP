@@ -5,6 +5,10 @@ It automatically scrapes the school portal, compares changes against a local dat
 Students or parents can receive instant alerts, while teachers can get a daily digest for their class.
 It solves the problem of needing to manually check the website (or app) multiple times a day for new grades or attendance marks.
 
+## 1-minute Demo video from a students's perspective
+
+[youtube.com](https://youtube.com/shorts/WWRYNReC1yQ?feature=share)
+
 ## Key Features
 
 ### Real-time Grade Monitoring
