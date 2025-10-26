@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+aiohttp
+aiogram
+psutil
+urllib3
