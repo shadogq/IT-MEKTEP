@@ -31,11 +31,13 @@ Detects and reports any new or removed attendance marks.
 
 - `/formative` – Full report of all current formative assessments and their average.  
 - `/absent` – Detailed report of all absences, grouped by date and reason.
+- `/summative` – Detailed report of all summative assessments.
+- `/top` – statistics on summative assessments for classes. May be conveniently disabled by the admin.
 
 ### High-Performance & Robust Architecture
 
 - Fully Asynchronous – Built with asyncio, aiohttp, and aiogram for efficiency.  
-- Intelligent Scraping – Manages login sessions, handles expiry, and avoids IP bans using semaphores.  
+- Intelligent Scraping – Manages login sessions, handles expiry, and uses semaphores.  
 - Adaptive Polling – Adjusts check intervals dynamically (60–300s) based on detected changes.
 
 ### Telegram Rate-Limit & Error Handling
@@ -57,10 +59,12 @@ Detects and reports any new or removed attendance marks.
 |----------|--------------|
 | `/start` | Begin setup (choose role, class, student) |
 | `/me` | Check your current subscription (role, class, student) |
-| `/formative` | Get instant report of formative assessments (ФО) |
+| `/formative` | Get instant report of formative assessments |
+| `/summative` | Get a report of all summative assessments |
 | `/absent` | Get detailed report of absences |
 | `/help` | Show help message |
-| `/teacher_time HH:MM` | (Teacher Mode) Set daily digest time (e.g., `/teacher_time 20:30`) |
+| `/settings` | Allows user to change notification settings (realtime, hourly, daily)|
+| `/teacher_time HH:MM` | (Teacher Mode) Set daily digest time |
 
 ### Administrator Commands
 
@@ -71,9 +75,11 @@ Detects and reports any new or removed attendance marks.
 | `/list` | List all registered users and subscriptions. |
 | `/set <id> <mode> [args]` | Modify a user's subscription. |
 | `/delete <id>` | Remove a user from the database. |
-| `/notify <message>` | Broadcast to all users. |
+| `/msg_all <message>` | Broadcast to all users. |
 | `/force_fetch` | Force all monitoring tasks to update immediately. |
 | `/enable` / `/disable` | Turn monitoring on/off globally. |
 | `/restart` | Gracefully restart the bot. |
 | `/stop` | Gracefully stop the bot. |
-| `/fast_stop` | Immediately stop (unsafe). |
+| `/fast_stop` | Immediately stop the script. |
+| `various toggle commands` | They allow the admin to quickly open or close registration for teachers. Top toggle command quickly toggles /top command's availability |
+
