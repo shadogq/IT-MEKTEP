@@ -1,13 +1,15 @@
-# Mektep.edu.kz Grade Monitor Bot
+# A 2-minute demo video from a student's perspective
+
+https://github.com/user-attachments/assets/acc93115-6c7e-4ce7-a3dc-257df0ae77fb
+
+## Mektep.edu.kz monitor bot
 
 This is an asynchronous **Telegram** (Telegram is similar to WeChat or WhatsApp) bot designed to monitor the [mektep.edu.kz](https://mektep.edu.kz) website for real-time changes in student grades and attendance. 
 It automatically scrapes the school portal, compares changes against a local database, and sends detailed notifications to subscribed users.  
 Students or parents can receive instant alerts, while teachers can get a daily digest for their class.
 It solves the problem of needing to manually check the website (or app) multiple times a day for new grades or attendance marks.
 
-## 1-minute Demo video from a students's perspective
 
-https://github.com/user-attachments/assets/acc93115-6c7e-4ce7-a3dc-257df0ae77fb
 
 ## Key Features
 
