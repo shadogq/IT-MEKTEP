@@ -7,7 +7,7 @@ It solves the problem of needing to manually check the website (or app) multiple
 
 ## 1-minute Demo video from a students's perspective
 
-https://github.com/user-attachments/assets/5b6f04b7-3cfb-4a4b-8372-365c6a0ad1e4
+https://github.com/user-attachments/assets/acc93115-6c7e-4ce7-a3dc-257df0ae77fb
 
 ## Key Features
 
